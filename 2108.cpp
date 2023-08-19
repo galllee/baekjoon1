@@ -10,8 +10,6 @@ void    print_mode(int *arr, int n)
 
     for (int i = 0; i < n; i++)
         count[arr[i] + 4000]++;
-    //if (n == 1)
-    //    idx = arr[0] + 4000;
     for (int i = arr[0] + 4000; i <= arr[n - 1] + 4000; i++)
     {
         if (max < count[i])
