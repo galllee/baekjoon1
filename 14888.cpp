@@ -17,7 +17,6 @@ void make_operation(int sum, int i){
             if (oper[j]){
                 oper[j]--;
                 if (j == 0)
-                    //sum += number[i]; 밑에처럼 매개변수로만 줘도 i == n까지 가면 어쨌든 매개변수인sum이 바뀌는거긴 하니까, 판별이 되겠지
                     make_operation(sum + number[i], i + 1);
                 else if (j == 1)
                     make_operation(sum - number[i], i + 1);
