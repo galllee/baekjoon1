@@ -17,6 +17,15 @@ public class Main{
             dice[i] = Integer.parseInt(st.nextToken());
         }
 
+        if (N == 1) {
+            for(int i = 0; i < 6; i++) {
+                sum += dice[i];
+            }
+            sum -= max;
+            System.out.println(sum);
+            return ;
+        }
+        
         for(int i = 0; i < 6; i++) {
             if (min > dice[i]) {
                 idx = i;
@@ -27,15 +36,6 @@ public class Main{
             }
         }
         a = min;
-
-        if (N == 1) {
-            for(int i = 0; i < 6; i++) {
-                sum += dice[i];
-            }
-            sum -= max;
-            System.out.println(sum);
-            return ;
-        }
 
         min = 50;
         for(int i = 0; i < 6; i++) {
